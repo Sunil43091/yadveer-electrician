@@ -1,202 +1,405 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Yadveer Electrician</title>
+    <title>Yadveer Electrician</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    body {
-      background: #f3f4f6;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    .container {
-      width: 100%;
-      max-width: 500px;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    .logo {
-      font-size: clamp(24px, 4vw, 34px);
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 10px;
-    }
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
 
-    .subtitle {
-      text-align: center;
-      color: #666;
-      margin-bottom: 25px;
-      font-size: 14px;
-    }
+      body {
+        background: #eef2ff;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
 
-    .input-group {
-      margin-bottom: 18px;
-    }
+      .container {
+        width: 100%;
 
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-      font-weight: 600;
-    }
+        max-width: 1180px;
 
-    input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 14px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      outline: none;
-      font-size: clamp(12px, 2vw, 15px);
-    }
+        background: white;
 
-    textarea {
-      resize: none;
-      height: 110px;
-    }
+        border-radius: 28px;
 
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: #0ea5e9;
-    }
+        overflow: hidden;
 
-    button {
-      width: 100%;
-      padding: 15px;
-      border: none;
-      background: #16a34a;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+        display: grid;
 
-    button:hover {
-      opacity: 0.9;
-    }
+        grid-template-columns: 1fr 1fr;
 
-    .service-box {
-      background: #f9fafb;
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      }
 
-    .footer {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 13px;
-      color: #666;
-    }
-  </style>
-</head>
+      /* LEFT */
 
-<body>
-  <div class="container">
-    <div class="logo">⚡ Yadveer Electrician</div>
+      .left {
+        background: linear-gradient(160deg, #5b3df5, #3b1fd4);
 
-    <p class="subtitle">Fast Home Electrical Services</p>
+        padding: 30px;
 
-    <div class="service-box">
-      ✔ Fan Repair <br />
-      ✔ Wiring Work <br />
-      ✔ Switch Board Repair <br />
-      ✔ Home Electrical Problems
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        text-align: center;
+
+        color: white;
+
+        position: relative;
+      }
+
+      .circle {
+        width: 210px;
+
+        height: 210px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.12);
+
+        backdrop-filter: blur(20px);
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        font-size: 95px;
+
+        margin-bottom: 35px;
+
+        box-shadow: 0 10px 40px rgba(255, 255, 255, 0.08);
+      }
+
+      .left h1 {
+        font-size: 52px;
+
+        font-weight: 700;
+
+        line-height: 1.1;
+
+        margin-bottom: 18px;
+      }
+
+      .left p {
+        font-size: 17px;
+
+        line-height: 1.8;
+
+        opacity: 0.95;
+
+        max-width: 430px;
+      }
+
+      .services {
+        margin-top: 45px;
+
+        text-align: left;
+
+        font-size: 18px;
+
+        line-height: 2.1;
+      }
+
+      /* RIGHT */
+
+      .right {
+        padding: 20px;
+      }
+
+      .badge {
+        display: inline-block;
+
+        background: #ede9fe;
+
+        color: #5b3df5;
+
+        padding: 8px 18px;
+
+        border-radius: 40px;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        margin-bottom: 18px;
+      }
+
+      .right h2 {
+        font-size: 42px;
+
+        margin-bottom: 10px;
+      }
+
+      .sub {
+        color: #6b7280;
+
+        margin-bottom: 35px;
+
+        font-size: 16px;
+      }
+
+      .input-group {
+        margin-bottom: 22px;
+      }
+
+      label {
+        display: block;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        margin-bottom: 10px;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+
+        padding: 16px;
+
+        border: 1px solid #d1d5db;
+
+        border-radius: 14px;
+
+        outline: none;
+
+        font-size: 15px;
+
+        transition: 0.3s;
+
+        background: white;
+      }
+
+      textarea {
+        height: 120px;
+
+        resize: none;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        border-color: #5b3df5;
+
+        box-shadow: 0 0 0 5px rgba(91, 61, 245, 0.12);
+      }
+
+      button {
+        width: 100%;
+
+        padding: 17px;
+
+        border: none;
+
+        border-radius: 14px;
+
+        background: #5b3df5;
+
+        color: white;
+
+        font-size: 17px;
+
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+
+        margin-top: 10px;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+
+        box-shadow: 0 10px 25px rgba(91, 61, 245, 0.3);
+      }
+
+      .footer {
+        margin-top: 25px;
+
+        text-align: center;
+
+        color: #6b7280;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 900px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+
+        .left {
+          padding: 50px 25px;
+        }
+
+        .right {
+          padding: 35px 25px;
+        }
+
+        .left h1 {
+          font-size: 38px;
+        }
+
+        .right h2 {
+          font-size: 34px;
+        }
+
+        .circle {
+          width: 150px;
+
+          height: 150px;
+
+          font-size: 65px;
+        }
+
+        .services {
+          font-size: 16px;
+
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="circle">⚡</div>
+
+        <h1>Yadveer Electrician</h1>
+
+        <p>Fast & Reliable Home Electrical Services for homes and offices.</p>
+
+        <div class="services">
+          ✔ Fan Repair <br />
+
+          ✔ Wiring Work <br />
+
+          ✔ Switch Board Repair <br />
+
+          ✔ Home Electrical Problems
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="badge">Electrical Booking Form</div>
+
+        <h2>Hello 👋</h2>
+
+        <p class="sub">Book your electrical service quickly</p>
+
+        <form onsubmit="sendWhatsApp(event)">
+          <div class="input-group">
+            <label>Full Name</label>
+
+            <input required id="name" placeholder="Enter full name" />
+          </div>
+
+          <div class="input-group">
+            <label>Phone Number</label>
+
+            <input required id="phone" placeholder="Phone Number" />
+          </div>
+
+          <div class="input-group">
+            <label>Area / Address</label>
+
+            <input id="area" placeholder="Address" />
+          </div>
+
+          <div class="input-group">
+            <label>Problem Type</label>
+
+            <select id="service">
+              <option>Fan Repair</option>
+
+              <option>Wiring</option>
+
+              <option>Switch Board Repair</option>
+
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Describe Problem</label>
+
+            <textarea id="problem"></textarea>
+          </div>
+
+          <button id="submitBtn">Request Service</button>
+        </form>
+
+        <div class="footer">Available For Home Visits</div>
+      </div>
     </div>
 
-    <div class="input-group">
-      <label>Name</label>
-      <input id="name" type="text" placeholder="Enter Name" />
-    </div>
+    <script>
+      function sendWhatsApp(e) {
+        e.preventDefault();
 
-    <div class="input-group">
-      <label>Phone Number</label>
-      <input id="phone" type="tel" placeholder="Enter Phone" />
-    </div>
+        const btn = document.getElementById("submitBtn");
 
-    <div class="input-group">
-      <label>Area / Address</label>
-      <input id="area" type="text" placeholder="Enter Area" />
-    </div>
+        btn.innerHTML = "Submitting...";
 
-    <div class="input-group">
-      <label>Problem Type</label>
+        const name = document.getElementById("name").value;
 
-      <select id="service">
-        <option>Fan Repair</option>
+        const phone = document.getElementById("phone").value;
 
-        <option>Wiring</option>
+        const area = document.getElementById("area").value;
 
-        <option>Switch Board</option>
+        const service = document.getElementById("service").value;
 
-        <option>Other</option>
-      </select>
-    </div>
+        const problem = document.getElementById("problem").value;
 
-    <div class="input-group">
-      <label>Describe Problem</label>
-
-      <textarea id="problem" placeholder="Write your issue"></textarea>
-    </div>
-
-    <button onclick="sendWhatsApp()">Request Service</button>
-
-    <div class="footer">Available For Home Visits</div>
-  </div>
-
-  <script>
-   function sendWhatsApp() {
-
-const name = document.getElementById("name").value;
-const phone = document.getElementById("phone").value;
-const area = document.getElementById("area").value;
-const service = document.getElementById("service").value;
-const problem = document.getElementById("problem").value;
-
-if (!name || !phone) {
-alert("Please fill Name and Phone");
-return;
-}
-
-const message = `⚡ New Service Request
+        const msg = `⚡ New Service Request
 
 Name: ${name}
+
 Phone: ${phone}
+
 Area: ${area}
+
 Service: ${service}
+
 Problem: ${problem}`;
 
-const yourNumber = "919056343091";
+        setTimeout(() => {
+          window.location.href = `https://wa.me/919056343091?text=${encodeURIComponent(msg)}`;
 
-const url =
-`https://api.whatsapp.com/send?phone=${yourNumber}&text=${encodeURIComponent(message)}`;
-
-window.location.href = url;
-
-}
-  </script>
-</body>
-
+          btn.innerHTML = "Request Service";
+        }, 800);
+      }
+    </script>
+  </body>
 </html>
