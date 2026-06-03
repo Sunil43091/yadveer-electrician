@@ -340,7 +340,7 @@ textarea {
 
 .contact-card p {
   font-size: 14px;
-
+text-align: left;
   color: #f3f4f6;
 }
 
