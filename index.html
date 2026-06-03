@@ -1,405 +1,393 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yadveer Electrician</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+background:#eef2ff;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:#eef2ff;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:20px;
+z-index:9999;
+}
+
+.spinner{
+width:80px;
+height:80px;
+border:7px solid #ddd;
+border-top:7px solid #5b3df5;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+/* CONTAINER */
+
+.container{
+width:100%;
+max-width:1180px;
+background:white;
+border-radius:28px;
+overflow:hidden;
+display:none;
+grid-template-columns:1fr 1fr;
+box-shadow:0 20px 60px rgba(0,0,0,.12);
+}
+
+.left{
+background:linear-gradient(160deg,#5b3df5,#3b1fd4);
+padding:30px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.circle{
+width:210px;
+height:210px;
+border-radius:50%;
+background:rgba(255,255,255,.12);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:95px;
+margin-bottom:35px;
+}
+
+.left h1{
+font-size:52px;
+margin-bottom:15px;
+}
+
+.left p{
+line-height:1.8;
+max-width:420px;
+}
+
+.services{
+margin-top:40px;
+line-height:2;
+font-size:18px;
+}
+
+.right{
+padding:30px;
+}
+
+.badge{
+display:inline-block;
+background:#ede9fe;
+color:#5b3df5;
+padding:8px 18px;
+border-radius:50px;
+margin-bottom:18px;
+font-size:14px;
+font-weight:600;
+}
+
+.right h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.sub{
+color:#666;
+margin-bottom:25px;
+}
+
+.input-group{
+margin-bottom:18px;
+}
+
+label{
+display:block;
+margin-bottom:8px;
+font-size:14px;
+font-weight:600;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:15px;
+border:1px solid #d1d5db;
+border-radius:12px;
+outline:none;
+font-size:15px;
+}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+textarea{
+height:120px;
+resize:none;
+}
 
-    <title>Yadveer Electrician</title>
+input:focus,
+textarea:focus,
+select:focus{
+border-color:#5b3df5;
+box-shadow:0 0 0 5px rgba(91,61,245,.12);
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:#5b3df5;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+margin-top:10px;
+}
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+.footer{
+margin-top:20px;
+text-align:center;
+color:#666;
+}
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+/* MOBILE */
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
+@media(max-width:900px){
 
-      body {
-        background: #eef2ff;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-      }
+.container{
+grid-template-columns:1fr;
+}
 
-      .container {
-        width: 100%;
+.left{
+padding:50px 25px;
+}
 
-        max-width: 1180px;
+.right{
+padding:30px 25px;
+}
 
-        background: white;
+.left h1{
+font-size:38px;
+}
 
-        border-radius: 28px;
+.circle{
+width:150px;
+height:150px;
+font-size:65px;
+}
 
-        overflow: hidden;
+.services{
+text-align:center;
+font-size:16px;
+}
 
-        display: grid;
+}
 
-        grid-template-columns: 1fr 1fr;
+</style>
+</head>
 
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-      }
+<body>
 
-      /* LEFT */
+<!-- Loader -->
 
-      .left {
-        background: linear-gradient(160deg, #5b3df5, #3b1fd4);
+<div id="loader">
 
-        padding: 30px;
+<div class="spinner"></div>
 
-        display: flex;
+<h2>⚡ Loading...</h2>
 
-        flex-direction: column;
+</div>
 
-        justify-content: center;
+<!-- Form -->
 
-        align-items: center;
+<div class="container">
 
-        text-align: center;
+<div class="left">
 
-        color: white;
+<div class="circle">⚡</div>
 
-        position: relative;
-      }
+<h1>Yadveer Electrician</h1>
 
-      .circle {
-        width: 210px;
+<p>Fast & Reliable Home Electrical Services for homes and offices.</p>
 
-        height: 210px;
+<div class="services">
 
-        border-radius: 50%;
+✔ Fan Repair <br>
 
-        background: rgba(255, 255, 255, 0.12);
+✔ Wiring Work <br>
 
-        backdrop-filter: blur(20px);
+✔ Switch Board Repair <br>
 
-        display: flex;
+✔ Home Electrical Problems
 
-        justify-content: center;
+</div>
 
-        align-items: center;
+</div>
 
-        font-size: 95px;
+<div class="right">
 
-        margin-bottom: 35px;
+<div class="badge">Electrical Booking Form</div>
 
-        box-shadow: 0 10px 40px rgba(255, 255, 255, 0.08);
-      }
+<h2>Hello 👋</h2>
 
-      .left h1 {
-        font-size: 52px;
+<p class="sub">Book your electrical service quickly</p>
 
-        font-weight: 700;
+<form onsubmit="sendWhatsApp(event)">
 
-        line-height: 1.1;
+<div class="input-group">
 
-        margin-bottom: 18px;
-      }
+<label>Full Name</label>
 
-      .left p {
-        font-size: 17px;
+<input required id="name" placeholder="Enter full name">
 
-        line-height: 1.8;
+</div>
 
-        opacity: 0.95;
+<div class="input-group">
 
-        max-width: 430px;
-      }
+<label>Phone Number</label>
 
-      .services {
-        margin-top: 45px;
+<input required id="phone" placeholder="Phone Number">
 
-        text-align: left;
+</div>
 
-        font-size: 18px;
+<div class="input-group">
 
-        line-height: 2.1;
-      }
+<label>Area / Address</label>
 
-      /* RIGHT */
+<input id="area" placeholder="Address">
 
-      .right {
-        padding: 20px;
-      }
+</div>
 
-      .badge {
-        display: inline-block;
+<div class="input-group">
 
-        background: #ede9fe;
+<label>Problem Type</label>
 
-        color: #5b3df5;
+<select id="service">
 
-        padding: 8px 18px;
+<option>Fan Repair</option>
 
-        border-radius: 40px;
+<option>Wiring</option>
 
-        font-size: 14px;
+<option>Switch Board Repair</option>
 
-        font-weight: 600;
+<option>Other</option>
 
-        margin-bottom: 18px;
-      }
+</select>
 
-      .right h2 {
-        font-size: 42px;
+</div>
 
-        margin-bottom: 10px;
-      }
+<div class="input-group">
 
-      .sub {
-        color: #6b7280;
+<label>Describe Problem</label>
 
-        margin-bottom: 35px;
+<textarea id="problem"></textarea>
 
-        font-size: 16px;
-      }
+</div>
 
-      .input-group {
-        margin-bottom: 22px;
-      }
+<button id="submitBtn">
 
-      label {
-        display: block;
+Request Service
 
-        font-size: 14px;
+</button>
 
-        font-weight: 600;
+</form>
 
-        margin-bottom: 10px;
-      }
+<div class="footer">
 
-      input,
-      textarea,
-      select {
-        width: 100%;
+Available For Home Visits
 
-        padding: 16px;
+</div>
 
-        border: 1px solid #d1d5db;
+</div>
 
-        border-radius: 14px;
+</div>
 
-        outline: none;
+<script>
 
-        font-size: 15px;
+window.onload=function(){
 
-        transition: 0.3s;
+setTimeout(()=>{
 
-        background: white;
-      }
+document.getElementById("loader").style.display="none";
 
-      textarea {
-        height: 120px;
+document.querySelector(".container").style.display="grid";
 
-        resize: none;
-      }
+},2000);
 
-      input:focus,
-      textarea:focus,
-      select:focus {
-        border-color: #5b3df5;
+};
 
-        box-shadow: 0 0 0 5px rgba(91, 61, 245, 0.12);
-      }
+function sendWhatsApp(e){
 
-      button {
-        width: 100%;
+e.preventDefault();
 
-        padding: 17px;
+const btn=document.getElementById("submitBtn");
 
-        border: none;
+btn.innerHTML="Submitting...";
 
-        border-radius: 14px;
+const msg=`⚡ New Service Request
 
-        background: #5b3df5;
+Name: ${name.value}
 
-        color: white;
+Phone: ${phone.value}
 
-        font-size: 17px;
+Area: ${area.value}
 
-        font-weight: 600;
+Service: ${service.value}
 
-        cursor: pointer;
+Problem: ${problem.value}`;
 
-        transition: 0.3s;
+setTimeout(()=>{
 
-        margin-top: 10px;
-      }
+window.location.href=`https://wa.me/919056343091?text=${encodeURIComponent(msg)}`;
 
-      button:hover {
-        transform: translateY(-2px);
+btn.innerHTML="Request Service";
 
-        box-shadow: 0 10px 25px rgba(91, 61, 245, 0.3);
-      }
+},800);
 
-      .footer {
-        margin-top: 25px;
+}
 
-        text-align: center;
+</script>
 
-        color: #6b7280;
-      }
-
-      /* MOBILE */
-
-      @media (max-width: 900px) {
-        .container {
-          grid-template-columns: 1fr;
-        }
-
-        .left {
-          padding: 50px 25px;
-        }
-
-        .right {
-          padding: 35px 25px;
-        }
-
-        .left h1 {
-          font-size: 38px;
-        }
-
-        .right h2 {
-          font-size: 34px;
-        }
-
-        .circle {
-          width: 150px;
-
-          height: 150px;
-
-          font-size: 65px;
-        }
-
-        .services {
-          font-size: 16px;
-
-          text-align: center;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <div class="left">
-        <div class="circle">⚡</div>
-
-        <h1>Yadveer Electrician</h1>
-
-        <p>Fast & Reliable Home Electrical Services for homes and offices.</p>
-
-        <div class="services">
-          ✔ Fan Repair <br />
-
-          ✔ Wiring Work <br />
-
-          ✔ Switch Board Repair <br />
-
-          ✔ Home Electrical Problems
-        </div>
-      </div>
-
-      <div class="right">
-        <div class="badge">Electrical Booking Form</div>
-
-        <h2>Hello 👋</h2>
-
-        <p class="sub">Book your electrical service quickly</p>
-
-        <form onsubmit="sendWhatsApp(event)">
-          <div class="input-group">
-            <label>Full Name</label>
-
-            <input required id="name" placeholder="Enter full name" />
-          </div>
-
-          <div class="input-group">
-            <label>Phone Number</label>
-
-            <input required id="phone" placeholder="Phone Number" />
-          </div>
-
-          <div class="input-group">
-            <label>Area / Address</label>
-
-            <input id="area" placeholder="Address" />
-          </div>
-
-          <div class="input-group">
-            <label>Problem Type</label>
-
-            <select id="service">
-              <option>Fan Repair</option>
-
-              <option>Wiring</option>
-
-              <option>Switch Board Repair</option>
-
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="input-group">
-            <label>Describe Problem</label>
-
-            <textarea id="problem"></textarea>
-          </div>
-
-          <button id="submitBtn">Request Service</button>
-        </form>
-
-        <div class="footer">Available For Home Visits</div>
-      </div>
-    </div>
-
-    <script>
-      function sendWhatsApp(e) {
-        e.preventDefault();
-
-        const btn = document.getElementById("submitBtn");
-
-        btn.innerHTML = "Submitting...";
-
-        const name = document.getElementById("name").value;
-
-        const phone = document.getElementById("phone").value;
-
-        const area = document.getElementById("area").value;
-
-        const service = document.getElementById("service").value;
-
-        const problem = document.getElementById("problem").value;
-
-        const msg = `⚡ New Service Request
-
-Name: ${name}
-
-Phone: ${phone}
-
-Area: ${area}
-
-Service: ${service}
-
-Problem: ${problem}`;
-
-        setTimeout(() => {
-          window.location.href = `https://wa.me/919056343091?text=${encodeURIComponent(msg)}`;
-
-          btn.innerHTML = "Request Service";
-        }, 800);
-      }
-    </script>
-  </body>
+</body>
 </html>
