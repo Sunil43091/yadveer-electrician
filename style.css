@@ -331,7 +331,7 @@ textarea {
 }
 
 .contact-card h4 {
-  font-size: 13px;
+  font-size: 16px;
 
   margin-bottom: 2px;
 
@@ -339,7 +339,7 @@ textarea {
 }
 
 .contact-card p {
-  font-size: 12px;
+  font-size: 14px;
 
   color: #f3f4f6;
 }
@@ -361,11 +361,11 @@ textarea {
   }
 
   .contact-card h4 {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .contact-card p {
-    font-size: 11px;
+    font-size: 14px;
   }
 }
 @media (max-width: 576px) {
