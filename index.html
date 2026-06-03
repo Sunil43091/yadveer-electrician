@@ -443,6 +443,10 @@ Area: ${area.value}
 Service: ${service.value}
 
 Problem: ${problem.value}`;
+gtag('event', 'whatsapp_click', {
+event_category: 'lead',
+event_label: 'service_booking'
+});
 
         setTimeout(() => {
           window.location.href = `https://wa.me/919056343091?text=${encodeURIComponent(msg)}`;
