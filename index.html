@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Yadveer Electrician</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    .input-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      font-size: clamp(12px, 2vw, 15px);
+    }
+
+    textarea {
+      resize: none;
+      height: 110px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #0ea5e9;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      background: #16a34a;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .service-box {
+      background: #f9fafb;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">⚡ Yadveer Electrician</div>
+
+    <p class="subtitle">Fast Home Electrical Services</p>
+
+    <div class="service-box">
+      ✔ Fan Repair <br />
+      ✔ Wiring Work <br />
+      ✔ Switch Board Repair <br />
+      ✔ Home Electrical Problems
+    </div>
+
+    <div class="input-group">
+      <label>Name</label>
+      <input id="name" type="text" placeholder="Enter Name" />
+    </div>
+
+    <div class="input-group">
+      <label>Phone Number</label>
+      <input id="phone" type="tel" placeholder="Enter Phone" />
+    </div>
+
+    <div class="input-group">
+      <label>Area / Address</label>
+      <input id="area" type="text" placeholder="Enter Area" />
+    </div>
+
+    <div class="input-group">
+      <label>Problem Type</label>
+
+      <select id="service">
+        <option>Fan Repair</option>
+
+        <option>Wiring</option>
+
+        <option>Switch Board</option>
+
+        <option>Other</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Describe Problem</label>
+
+      <textarea id="problem" placeholder="Write your issue"></textarea>
+    </div>
+
+    <button onclick="sendWhatsApp()">Request Service</button>
+
+    <div class="footer">Available For Home Visits</div>
+  </div>
+
+  <script>
+   function sendWhatsApp() {
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const area = document.getElementById("area").value;
+const service = document.getElementById("service").value;
+const problem = document.getElementById("problem").value;
+
+if (!name || !phone) {
+alert("Please fill Name and Phone");
+return;
+}
+
+const message = `⚡ New Service Request
+
+Name: ${name}
+Phone: ${phone}
+Area: ${area}
+Service: ${service}
+Problem: ${problem}`;
+
+const yourNumber = "919056343091";
+
+const url =
+`https://api.whatsapp.com/send?phone=${yourNumber}&text=${encodeURIComponent(message)}`;
+
+window.location.href = url;
+
+}
+  </script>
+</body>
+
+</html>
