@@ -1,460 +1,431 @@
 <!doctype html>
 <html lang="en">
-<head>
-<title>Yadveer Electrician | Electrician Services in Punjab | AC, Wiring & Repair</title>
-
-<meta name="description"
-content="Yadveer Electrician provides home electrical services including fan repair, AC service, wiring work, switch board repair, washing machine repair and electrical maintenance.">
-
-<meta name="keywords"
-content="electrician, electrician near me, fan repair, AC service, wiring work, switch board repair, washing machine repair, home electrical services">
-
-<meta name="author" content="Yadveer Electrician">
-
-<meta name="robots" content="index, follow">
-
-<meta name="googlebot" content="index, follow">
-
-<meta name="language" content="English">
-
-<meta name="revisit-after" content="7 days">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="canonical" href="https://yadveer-electrician.vercel.app/">
-
-<!-- Open Graph -->
-
-<meta property="og:title"
-content="Yadveer Electrician | Fast Home Electrical Services">
-
-<meta property="og:description"
-content="Book electrician services for wiring, AC repair, fan repair and electrical work.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:url"
-content="https://yadveer-electrician.vercel.app/">
-
-<meta property="og:image"
-content="https://yadveer-electrician.vercel.app/logo.png">
-
-<!-- Twitter -->
-
-<meta name="twitter:card" content="summary_large_image">
-
-<meta name="twitter:title"
-content="Yadveer Electrician">
-
-<meta name="twitter:description"
-content="Fast & Reliable Home Electrical Services">
-
-<meta name="theme-color" content="#5b3df5">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"Electrician",
-"name":"Yadveer Electrician",
-"url":"https://yadveer-electrician.vercel.app/",
-"telephone":"+919056343091",
-"serviceType":"Electrical Services",
-"areaServed":"Punjab"
-}
-</script>
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:"Poppins",sans-serif;
-}
-
-body{
-background:#eef2ff;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
-}
-
-/* LOADER */
-
-#loader{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100vh;
-background:#eef2ff;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-gap:20px;
-z-index:9999;
-}
-
-.spinner{
-width:80px;
-height:80px;
-border:7px solid #ddd;
-border-top:7px solid #5b3df5;
-border-radius:50%;
-animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-100%{
-transform:rotate(360deg);
-}
-}
-
-/* CONTAINER */
-
-.container{
-width:100%;
-max-width:1180px;
-background:white;
-border-radius:28px;
-overflow:hidden;
-display:none;
-grid-template-columns:1fr 1fr;
-box-shadow:0 20px 60px rgba(0,0,0,.12);
-}
-
-.left{
-background:linear-gradient(160deg,#5b3df5,#3b1fd4);
-padding:30px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-}
-
-.circle{
-width:210px;
-height:210px;
-border-radius:50%;
-background:rgba(255,255,255,.12);
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:95px;
-margin-bottom:35px;
-}
-
-.left h1{
-font-size:52px;
-margin-bottom:15px;
-}
-
-.left p{
-line-height:1.8;
-max-width:420px;
-}
-
-.services{
-margin-top:40px;
-line-height:2;
-font-size:18px;
-}
-
-.right{
-padding:30px;
-}
-
-.badge{
-display:inline-block;
-background:#ede9fe;
-color:#5b3df5;
-padding:8px 18px;
-border-radius:50px;
-margin-bottom:18px;
-font-size:14px;
-font-weight:600;
-}
-
-.right h2{
-font-size:40px;
-margin-bottom:10px;
-}
-
-.sub{
-color:#666;
-margin-bottom:25px;
-}
-
-.input-group{
-margin-bottom:18px;
-}
-
-label{
-display:block;
-margin-bottom:8px;
-font-size:14px;
-font-weight:600;
-}
-
-input,
-textarea,
-select{
-width:100%;
-padding:15px;
-border:1px solid #d1d5db;
-border-radius:12px;
-outline:none;
-font-size:15px;
-}
-
-textarea{
-height:120px;
-resize:none;
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-border-color:#5b3df5;
-box-shadow:0 0 0 5px rgba(91,61,245,.12);
-}
-
-button{
-width:100%;
-padding:16px;
-border:none;
-border-radius:12px;
-background:#5b3df5;
-color:white;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-margin-top:10px;
-}
-
-.footer{
-margin-top:20px;
-text-align:center;
-color:#666;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.container{
-grid-template-columns:1fr;
-}
-
-.left{
-padding:50px 25px;
-}
-
-.right{
-padding:30px 25px;
-}
-
-.left h1{
-font-size:38px;
-}
-
-.circle{
-width:150px;
-height:150px;
-font-size:65px;
-}
-
-.services{
-text-align:center;
-font-size:16px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- Loader -->
-
-<div id="loader">
-
-<div class="spinner"></div>
-
-<h2>⚡ Loading...</h2>
-
-</div>
-
-<!-- Form -->
-
-<div class="container">
-
-<div class="left">
-
-<div class="circle">⚡</div>
-
-<h1>Yadveer Electrician</h1>
-
-<p>Fast & Reliable Home Electrical Services for homes and offices.</p>
-
-<div class="services">
-
-✔ Fan Repair <br>
-
-✔ Wiring Work <br>
-
-✔ Switch Board Repair <br>
-
-✔ Home Electrical Problems
-
-</div>
-
-</div>
-
-<div class="right">
-
-<div class="badge">Electrical Booking Form</div>
-
-<h2>Hello 👋</h2>
-
-<p class="sub">Book your electrical service quickly</p>
-
-<form onsubmit="sendWhatsApp(event)">
-
-<div class="input-group">
-
-<label>Full Name</label>
-
-<input required id="name" placeholder="Enter full name">
-
-</div>
-
-<div class="input-group">
-
-<label>Phone Number</label>
-
-<input required id="phone" placeholder="Phone Number">
-
-</div>
-
-<div class="input-group">
-
-<label>Area / Address</label>
-
-<input id="area" placeholder="Address">
-
-</div>
-
-<div class="input-group">
-
-<label>Problem Type</label>
-
-<select id="service">
-
-<option value="">Select Service</option>
-
-<option>Fan Repair</option>
-
-<option>Wiring Work</option>
-
-<option>Switch Board Repair</option>
-
-<option>AC Service / Repair</option>
-
-<option>AC Installation</option>
-
-<option>Washing Machine Repair</option>
-
-<option>Water Motor Repair</option>
-
-<option>Press / Iron Repair</option>
-
-<option>Light Installation</option>
-
-<option>MCB Repair</option>
-
-<option>Power Issue</option>
-
-<option>Short Circuit Problem</option>
-
-<option>Socket Repair</option>
-
-<option>Inverter Connection</option>
-
-<option>Geyser Repair</option>
-
-<option>Cooler Repair</option>
-
-<option>Door Bell Repair</option>
-
-<option>Home Electrical Problem</option>
-
-<option>Office Electrical Work</option>
-
-<option>Other</option>
-
-</select>
-
-</div>
-
-<div class="input-group">
-
-<label>Describe Problem</label>
-
-<textarea id="problem"></textarea>
-
-</div>
-
-<button id="submitBtn">
-
-Request Service
-
-</button>
-
-</form>
-
-<div class="footer">
-
-Available For Home Visits
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-
-window.onload=function(){
-
-setTimeout(()=>{
-
-document.getElementById("loader").style.display="none";
-
-document.querySelector(".container").style.display="grid";
-
-},2000);
-
-};
-
-function sendWhatsApp(e){
-
-e.preventDefault();
-
-const btn=document.getElementById("submitBtn");
-
-btn.innerHTML="Submitting...";
-
-const msg=`⚡ New Service Request
+  <head>
+    <title>
+      Yadveer Electrician | Electrician Services in Punjab | AC, Wiring & Repair
+    </title>
+
+    <meta
+      name="description"
+      content="Yadveer Electrician provides home electrical services including fan repair, AC service, wiring work, switch board repair, washing machine repair and electrical maintenance."
+    />
+
+    <meta
+      name="keywords"
+      content="electrician, electrician near me, fan repair, AC service, wiring work, switch board repair, washing machine repair, home electrical services"
+    />
+
+    <meta name="author" content="Yadveer Electrician" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="googlebot" content="index, follow" />
+
+    <meta name="language" content="English" />
+
+    <meta name="revisit-after" content="7 days" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="canonical" href="https://yadveer-electrician.vercel.app/" />
+
+    <!-- Open Graph -->
+
+    <meta
+      property="og:title"
+      content="Yadveer Electrician | Fast Home Electrical Services"
+    />
+
+    <meta
+      property="og:description"
+      content="Book electrician services for wiring, AC repair, fan repair and electrical work."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://yadveer-electrician.vercel.app/" />
+
+    <meta
+      property="og:image"
+      content="https://yadveer-electrician.vercel.app/logo.png"
+    />
+
+    <!-- Twitter -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:title" content="Yadveer Electrician" />
+
+    <meta
+      name="twitter:description"
+      content="Fast & Reliable Home Electrician Services"
+    />
+
+    <meta name="theme-color" content="#5b3df5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Electrician",
+        "name": "Yadveer Electrician",
+        "url": "https://yadveer-electrician.vercel.app/",
+        "telephone": "+919056343091",
+        "serviceType": "Electrician Services",
+        "areaServed": "Punjab"
+      }
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #eef2ff;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      /* LOADER */
+
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #eef2ff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        z-index: 9999;
+      }
+
+      .spinner {
+        width: 80px;
+        height: 80px;
+        border: 7px solid #ddd;
+        border-top: 7px solid #5b3df5;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* CONTAINER */
+
+      .container {
+        width: 100%;
+        max-width: 1180px;
+        background: white;
+        border-radius: 28px;
+        overflow: hidden;
+        display: none;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      }
+
+      .left {
+        background: linear-gradient(160deg, #5b3df5, #3b1fd4);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+      }
+
+      .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 35px;
+      }
+
+      .left h1 {
+        font-size: 52px;
+        margin-bottom: 15px;
+      }
+
+      .left p {
+        line-height: 1.8;
+        max-width: 420px;
+      }
+
+      .services {
+        margin-top: 40px;
+        line-height: 2;
+        font-size: 18px;
+      }
+
+      .right {
+        padding: 30px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #ede9fe;
+        color: #5b3df5;
+        padding: 8px 18px;
+        border-radius: 50px;
+        margin-bottom: 18px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .right h2 {
+        font-size: 40px;
+        margin-bottom: 10px;
+      }
+
+      .sub {
+        color: #666;
+        margin-bottom: 25px;
+      }
+
+      .input-group {
+        margin-bottom: 18px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #d1d5db;
+        border-radius: 12px;
+        outline: none;
+        font-size: 15px;
+      }
+
+      textarea {
+        height: 120px;
+        resize: none;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        border-color: #5b3df5;
+        box-shadow: 0 0 0 5px rgba(91, 61, 245, 0.12);
+      }
+
+      button {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 12px;
+        background: #5b3df5;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #666;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 900px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+
+        .left {
+          padding: 50px 25px;
+        }
+
+        .right {
+          padding: 30px 25px;
+        }
+
+        .left h1 {
+          font-size: 38px;
+        }
+
+        .circle {
+          width: 150px;
+          height: 150px;
+        }
+
+        .services {
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Loader -->
+
+    <div id="loader">
+      <div class="spinner"></div>
+
+      <h2>⚡ Loading...</h2>
+    </div>
+
+    <!-- Form -->
+
+    <div class="container">
+      <div class="left">
+        <div class="circle"><a href="https://yadveer-electrician.vercel.app/"><img src="logo.png" alt="Site Logo" width="80" height="80"></a></div>
+        <!-- <div class="circle">⚡</div> -->
+
+        <h1>Yadveer Electrician</h1>
+
+        <p>Fast & Reliable Home Electrical Services for homes and offices.</p>
+
+        <div class="services">
+          ✔ Fan Repair <br />
+
+          ✔ Wiring Work <br />
+
+          ✔ Switch Board Repair <br />
+
+          ✔ Home Electrical Problems
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="badge">Electrical Booking Form</div>
+
+        <h2>Hello 👋</h2>
+
+        <p class="sub">Book your electrical service quickly</p>
+
+        <form onsubmit="sendWhatsApp(event)">
+          <div class="input-group">
+            <label>Full Name</label>
+
+            <input required id="name" placeholder="Enter full name" />
+          </div>
+
+          <div class="input-group">
+            <label>Phone Number</label>
+
+            <input required id="phone" placeholder="Phone Number" />
+          </div>
+
+          <div class="input-group">
+            <label>Area / Address</label>
+
+            <input id="area" placeholder="Address" />
+          </div>
+
+          <div class="input-group">
+            <label>Problem Type</label>
+
+            <select id="service">
+              <option value="">Select Service</option>
+
+              <option>Fan Repair</option>
+
+              <option>Wiring Work</option>
+
+              <option>Switch Board Repair</option>
+
+              <option>AC Service / Repair</option>
+
+              <option>AC Installation</option>
+
+              <option>Washing Machine Repair</option>
+
+              <option>Water Motor Repair</option>
+
+              <option>Press / Iron Repair</option>
+
+              <option>Light Installation</option>
+
+              <option>MCB Repair</option>
+
+              <option>Power Issue</option>
+
+              <option>Short Circuit Problem</option>
+
+              <option>Socket Repair</option>
+
+              <option>Inverter Connection</option>
+
+              <option>Geyser Repair</option>
+
+              <option>Cooler Repair</option>
+
+              <option>Door Bell Repair</option>
+
+              <option>Home Electrical Problem</option>
+
+              <option>Office Electrical Work</option>
+
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Describe Problem</label>
+
+            <textarea id="problem"></textarea>
+          </div>
+
+          <button id="submitBtn">Request Service</button>
+        </form>
+
+        <div class="footer">Available For Home Visits</div>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        setTimeout(() => {
+          document.getElementById("loader").style.display = "none";
+
+          document.querySelector(".container").style.display = "grid";
+        }, 2000);
+      };
+
+      function sendWhatsApp(e) {
+        e.preventDefault();
+
+        const btn = document.getElementById("submitBtn");
+
+        btn.innerHTML = "Submitting...";
+
+        const msg = `⚡ New Service Request
 
 Name: ${name.value}
 
@@ -466,17 +437,12 @@ Service: ${service.value}
 
 Problem: ${problem.value}`;
 
-setTimeout(()=>{
+        setTimeout(() => {
+          window.location.href = `https://wa.me/919056343091?text=${encodeURIComponent(msg)}`;
 
-window.location.href=`https://wa.me/919056343091?text=${encodeURIComponent(msg)}`;
-
-btn.innerHTML="Request Service";
-
-},800);
-
-}
-
-</script>
-
-</body>
+          btn.innerHTML = "Request Service";
+        }, 800);
+      }
+    </script>
+  </body>
 </html>
