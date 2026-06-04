@@ -16,7 +16,7 @@ body {
 }
 
 /* Loader */
-
+/* 
 #loader {
   position: fixed;
   top: 0;
@@ -46,6 +46,39 @@ body {
   100% {
     transform: rotate(360deg);
   }
+} */
+ #loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:#4b2be3;
+color:#fff;
+z-index:99999;
+text-align:center;
+}
+
+.loader-logo{
+margin:20px 0;
+border-radius:50%;
+background:white;
+padding:15px;
+}
+
+#loader h2{
+font-size:32px;
+margin-bottom:10px;
+}
+
+#loader p{
+font-size:15px;
+line-height:1.6;
+opacity:.9;
 }
 
 /* Main */
@@ -498,6 +531,9 @@ textarea {
   .badge {
     text-align: center;
   }
+  #loader h2{
+   font-size:20px;
+}
 }
 
 @media (max-width: 576px) {
