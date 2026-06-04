@@ -1,5 +1,3 @@
 User-agent: *
-
 Allow: /
-
 Sitemap: https://yadveer-electrician.vercel.app/sitemap.xml
