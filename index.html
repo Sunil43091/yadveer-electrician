@@ -167,7 +167,22 @@
     </div>
     <button onclick="closeAd()" class="close_btn">✕</button>
   </div>
-  <script>
+<script>
+window.onload = function () {
+  setTimeout(() => {
+    const loader = document.getElementById("loader");
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+
+      document.querySelector(".container").style.display = "grid";
+    }, 500);
+
+  }, 2000);
+};
+
 function sendWhatsApp(e) {
   e.preventDefault();
 
@@ -180,7 +195,7 @@ function sendWhatsApp(e) {
   const serviceDate = document.getElementById("serviceDate").value;
   const availableTime = document.getElementById("availableTime").value;
   const service = document.getElementById("service").value;
-  const feedback = document.getElementById("feedback").value;
+  const problem = document.getElementById("problem").value;
 
   const msg = `⚡ Service Request
 Name: ${name}
@@ -189,15 +204,21 @@ Area: ${area}
 Date: ${serviceDate}
 Available Time: ${availableTime}
 Service: ${service}
-Feedback: ${feedback}`;
+Problem: ${problem}`;
 
   window.open(
     `https://wa.me/919056343091?text=${encodeURIComponent(msg)}`,
     "_blank"
   );
 
-  btn.innerHTML = "Submit";
+  btn.innerHTML = "⚡ Book Service on WhatsApp";
 }
+
+function closeAd() {
+  document.getElementById("bottomAd").style.display = "none";
+}
+
+setTimeout(closeAd, 10000);
 </script>
 </body>
 
