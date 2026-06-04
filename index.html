@@ -12,7 +12,8 @@
       name="description"
       content="Yadveer Electrician provides AC repair, fan repair, wiring work, washing machine repair and home electrician services in Punjab."
     />
-
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yadveer-electrician.vercel.app/" />
     <meta
       name="keywords"
       content="electrician Punjab, AC repair, wiring work, washing machine repair, electrician near me"
@@ -67,12 +68,21 @@
   <body>
     <div id="loader">
       <div class="spinner"></div>
-      <h2>⚡ Loading...</h2>
+      <img src="logo.png" width="80" alt="logo" class="loader-logo" />
+      <h2>👋 Welcome / ਜੀ ਆਇਆਂ ਨੂੰ</h2>
+      <p>Please Wait... / ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ</p>
     </div>
     <div class="container">
       <div class="left">
         <div class="circle">
-          <img src="logo.png" width="80" height="80" alt="Logo Site" />
+          <img
+            src="logo.png"
+            width="80"
+            height="80"
+            alt="Logo Site"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <h1>Yadveer Electrician | ਯਾਦਵੀਰ ਇਲੈਕਟ੍ਰੀਸ਼ਨ</h1>
 
@@ -165,7 +175,8 @@
           </a>
         </div>
         <div class="footer">
-          © 2026 Yadveer Electrician Fast Service Across Patiala Punjab.
+          © <span id="year"></span> Yadveer Electrician Fast Service Across
+          Patiala Punjab.
         </div>
       </div>
       <div class="right">
@@ -173,30 +184,41 @@
           Electrician Booking Form / ਇਲੈਕਟ੍ਰੀਸ਼ਨ ਬੁਕਿੰਗ ਫਾਰਮ
         </div>
 
-        <h2>👋 Hello / ਸਤ ਸ੍ਰੀ ਅਕਾਲ</h2>
+        <h2>👋 Welcome / ਜੀ ਆਇਆਂ ਨੂੰ</h2>
 
-        <p class="sub">Book your service quickly / ਆਪਣੀ ਸੇਵਾ ਜਲਦੀ ਬੁੱਕ ਕਰੋ</p>
+        <p class="sub">
+          Book Your Electrician Service Today ⚡ / ਅੱਜ ਹੀ ਆਪਣੀ ਸੇਵਾ ਬੁੱਕ ਕਰੋ
+        </p>
         <form onsubmit="sendWhatsApp(event)">
           <div class="input-group">
             <label>Name / ਨਾਮ</label>
             <input
               required
               id="name"
+              autocomplete="name"
               placeholder="Enter your name / ਆਪਣਾ ਨਾਮ ਲਿਖੋ"
             />
           </div>
           <div class="input-group">
             <label>Phone / ਫੋਨ</label>
             <input
-              required
-              id="phone"
               type="tel"
+              id="phone"
+              inputmode="numeric"
+              pattern="[0-9]{10}"
+              maxlength="10"
+              required
               placeholder="Enter phone number / ਫੋਨ ਨੰਬਰ ਲਿਖੋ"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
             />
           </div>
           <div class="input-group">
             <label>Address / ਪਤਾ</label>
-            <input id="area" placeholder="Enter address / ਆਪਣਾ ਪਤਾ ਲਿਖੋ" />
+            <input
+              id="area"
+              placeholder="Enter address / ਆਪਣਾ ਪਤਾ ਲਿਖੋ"
+              required
+            />
           </div>
           <div class="input-group">
             <label>Service / ਸੇਵਾ</label>
@@ -233,23 +255,30 @@
           <div class="input-group">
             <label>Available Time / ਉਪਲਬਧ ਸਮਾਂ</label>
             <select id="availableTime" required>
-              <option value="">Select Time</option>
+              <option value="">Select Time / ਸਮਾਂ ਚੁਣੋ</option>
+
               <option>9 AM - 11 AM</option>
+
               <option>11 AM - 1 PM</option>
+
               <option>1 PM - 3 PM</option>
+
               <option>3 PM - 5 PM</option>
+
               <option>5 PM - 7 PM</option>
-              <option>Anytime</option>
+
+              <option>Anytime / ਕਦੇ ਵੀ</option>
             </select>
           </div>
           <div class="input-group">
             <label>Problem / ਸਮੱਸਿਆ</label>
             <textarea
               id="problem"
+              rows="4"
               placeholder="Describe your problem / ਆਪਣੀ ਸਮੱਸਿਆ ਲਿਖੋ"
             ></textarea>
           </div>
-          <button id="submitBtn">
+          <button id="submitBtn" type="submit">
             <i class="fa-brands fa-whatsapp"></i> Book Service on WhatsApp
           </button>
         </form>
@@ -266,7 +295,7 @@
           <div class="progress-fill"></div>
         </div>
       </div>
-      <button onclick="closeAd()" class="close_btn">✕</button>
+      <button onclick="closeAd()" class="close_btn" type="submit">✕</button>
     </div>
 
     <div id="confirmPopup" class="popup-overlay">
@@ -275,11 +304,13 @@
         <p>Are you sure you want to book this service?</p>
 
         <div class="popup-btns">
-          <button onclick="confirmBooking()" class="confirm-btn">
+          <button onclick="confirmBooking()" class="confirm-btn" type="button">
             Confirm
           </button>
 
-          <button onclick="closePopup()" class="cancel-btn">Cancel</button>
+          <button onclick="closePopup()" class="cancel-btn" type="button">
+            Cancel
+          </button>
         </div>
       </div>
     </div>
@@ -301,7 +332,6 @@
 
       function sendWhatsApp(e) {
         e.preventDefault();
-
         const name = document.getElementById("name").value;
         const phone = document.getElementById("phone").value;
         const area = document.getElementById("area").value;
@@ -311,18 +341,20 @@
         const problem = document.getElementById("problem").value;
 
         bookingMessage = `⚡ Service Request
-Name: ${name}
-Phone: ${phone}
-Area: ${area}
-Date: ${serviceDate}
-Available Time: ${availableTime}
-Service: ${service}
-Problem: ${problem}`;
+        Name: ${name}
+        Phone: ${phone}
+        Area: ${area}
+        Date: ${serviceDate}
+        Available Time: ${availableTime}
+        Service: ${service}
+        Problem: ${problem}`;
 
         document.getElementById("confirmPopup").style.display = "flex";
       }
 
       function confirmBooking() {
+        gtag("event", "booking_confirmed");
+
         window.open(
           `https://wa.me/919056343091?text=${encodeURIComponent(bookingMessage)}`,
           "_blank",
@@ -340,6 +372,14 @@ Problem: ${problem}`;
       }
 
       setTimeout(closeAd, 10000);
+
+      document.getElementById("year").innerText = new Date().getFullYear();
+
+      window.onclick = function (e) {
+        if (e.target === document.getElementById("confirmPopup")) {
+          closePopup();
+        }
+      };
     </script>
   </body>
 </html>
