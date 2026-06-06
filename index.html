@@ -347,47 +347,51 @@
         }, 2000);
       };
 
-      let bookingMessage = "";
+     let bookingMessage = "";
 
-      function sendWhatsApp(e) {
-        e.preventDefault();
-        const name = document.getElementById("name").value;
-        const phone = document.getElementById("phone").value;
-        const area = document.getElementById("area").value;
-        const serviceDate = document.getElementById("serviceDate").value;
-        const availableTime = document.getElementById("availableTime").value;
-        const phoneNumber = "919646064935"; // +91 without +
-        const bookingMessage = `✨ *NEW SERVICE REQUEST*
-            ───────────────
-            👤 *Name:* ${name}
-            📞 *Phone:* ${phone}
-            📍 *Area:* ${area}
-            ───────────────
-            📅 *Date:* ${formattedDate}
-            ⏰ *Time:* ${availableTime}
-            ───────────────
-            🛠️ *Service:* ${service}
-            ───────────────
-            ⚡ *Please respond ASAP*`;
+function sendWhatsApp(e) {
+  e.preventDefault();
 
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(bookingMessage)}`;
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const area = document.getElementById("area").value;
+  const service = document.getElementById("service").value;
+  const serviceDate = document.getElementById("serviceDate").value;
+  const availableTime = document.getElementById("availableTime").value;
 
-        window.open(url, "_blank");
+  const phoneNumber = "919646064935";
 
-        document.getElementById("confirmPopup").style.display = "flex";
-      }
+  // Format date
+  const formattedDate = new Date(serviceDate).toLocaleDateString("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 
-      function confirmBooking() {
-        gtag("event", "booking_confirmed");
+  // SAVE IN GLOBAL VARIABLE (IMPORTANT)
+  bookingMessage = `✨ *NEW SERVICE REQUEST*
+───────────────
+👤 *Name:* ${name}
+📞 *Phone:* ${phone}
+📍 *Area:* ${area}
+───────────────
+📅 *Date:* ${formattedDate}
+⏰ *Time:* ${availableTime}
+───────────────
+🛠️ *Service:* ${service}
+───────────────
+⚡ *Please respond ASAP*`;
 
-        window.open(
-          `https://wa.me/919646064935?text=${encodeURIComponent(bookingMessage)}`,
-          "_blank",
-        );
+  // Show popup FIRST
+  document.getElementById("confirmPopup").style.display = "flex";
+}
+     function confirmBooking() {
+  const url = `https://wa.me/919646064935?text=${encodeURIComponent(bookingMessage)}`;
 
-        closePopup();
-      }
+  window.open(url, "_blank");
 
+  closePopup();
+}
       function closePopup() {
         document.getElementById("confirmPopup").style.display = "none";
       }
