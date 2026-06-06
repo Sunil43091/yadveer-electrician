@@ -66,12 +66,12 @@
   </head>
 
   <body>
- <div id="loader">
-  <div class="spinner"></div>
-  <img src="logo.png" width="80" alt="logo" class="loader-logo" />
-  <h2>👋 Welcome / ਜੀ ਆਇਆਂ ਨੂੰ</h2>
-  <p>Please Wait... / ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ</p>
-</div>
+    <div id="loader">
+      <div class="spinner"></div>
+      <img src="logo.png" width="80" alt="logo" class="loader-logo" />
+      <h2>👋 Welcome / ਜੀ ਆਇਆਂ ਨੂੰ</h2>
+      <p>Please Wait... / ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ</p>
+    </div>
     <div class="container">
       <div class="left">
         <div class="circle">
@@ -357,19 +357,28 @@
         const serviceDate = document.getElementById("serviceDate").value;
         const availableTime = document.getElementById("availableTime").value;
         const service = document.getElementById("service").value;
-       const phoneNumber = "919646064935"; // +91 without +
-const bookingMessage = `✨ *NEW SERVICE REQUEST*
+        const phoneNumber = "919646064935"; // +91 without +
+        // ✅ YAHAN ADD KARNA HAI (date format convert)
+  const rawDate = serviceDate;
+  const parts = rawDate.split("-");
+  const formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+        const bookingMessage = `✨ *NEW SERVICE REQUEST*
+            ───────────────
+            👤 *Name:* ${name}
+            📞 *Phone:* ${phone}
+            📍 *Area:* ${area}
+            ───────────────
+            📅 *Date:* ${formattedDate}
+            ⏰ *Time:* ${availableTime}
+            ───────────────
+            🛠️ *Service:* ${service}
+            📝 *Problem:* ${problem}
+            ───────────────
+            ⚡ *Please respond ASAP*`;
 
-👤 Name: ${name}
-📞 Phone: ${phone}
-📍 Area: ${area}
-📅 Date: ${serviceDate}
-⏰ Time: ${availableTime}
-🛠️ Service: ${service}`;
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(bookingMessage)}`;
 
-const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(bookingMessage)}`;
-
-window.open(url, "_blank");
+        window.open(url, "_blank");
 
         document.getElementById("confirmPopup").style.display = "flex";
       }
