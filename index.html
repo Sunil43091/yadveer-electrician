@@ -356,12 +356,7 @@
         const area = document.getElementById("area").value;
         const serviceDate = document.getElementById("serviceDate").value;
         const availableTime = document.getElementById("availableTime").value;
-        const service = document.getElementById("service").value;
         const phoneNumber = "919646064935"; // +91 without +
-        // ✅ YAHAN ADD KARNA HAI (date format convert)
-  const rawDate = serviceDate;
-  const parts = rawDate.split("-");
-  const formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
         const bookingMessage = `✨ *NEW SERVICE REQUEST*
             ───────────────
             👤 *Name:* ${name}
@@ -372,7 +367,6 @@
             ⏰ *Time:* ${availableTime}
             ───────────────
             🛠️ *Service:* ${service}
-            📝 *Problem:* ${problem}
             ───────────────
             ⚡ *Please respond ASAP*`;
 
