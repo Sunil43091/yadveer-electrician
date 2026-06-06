@@ -66,12 +66,12 @@
   </head>
 
   <body>
-    <div id="loader">
-      <div class="spinner"></div>
-      <img src="logo.png" width="80" alt="logo" class="loader-logo" />
-      <h2>👋 Welcome / ਜੀ ਆਇਆਂ ਨੂੰ</h2>
-      <p>Please Wait... / ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ</p>
-    </div>
+ <div id="loader">
+  <div class="spinner"></div>
+  <img src="logo.png" width="80" alt="logo" class="loader-logo" />
+  <h2>👋 Welcome / ਜੀ ਆਇਆਂ ਨੂੰ</h2>
+  <p>Please Wait... / ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ</p>
+</div>
     <div class="container">
       <div class="left">
         <div class="circle">
@@ -367,30 +367,22 @@
         const service = document.getElementById("service").value;
         const problem = document.getElementById("problem").value;
 
-        const bookingMessage = `✨ *NEW SERVICE REQUEST*
+       const phoneNumber = "919876818874"; // +91 without +
+const bookingMessage = `✨ *NEW SERVICE REQUEST*
 
-━━━━━━━━━━━━━━━
+👤 Name: ${name}
+📞 Phone: ${phone}
+📍 Area: ${area}
 
-👤 *Customer Details*  
-• Name: ${name}  
-• Phone: ${phone}  
-• Area: ${area}  
+📅 Date: ${serviceDate}
+⏰ Time: ${availableTime}
 
-━━━━━━━━━━━━━━━
+🛠️ Service: ${service}
+📝 Problem: ${problem}`;
 
-📅 *Booking Details*  
-• Date: ${serviceDate}  
-• Time: ${availableTime}  
+const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(bookingMessage)}`;
 
-━━━━━━━━━━━━━━━
-
-🛠️ *Service Info*  
-• Service: ${service}  
-• Problem: ${problem}  
-
-━━━━━━━━━━━━━━━
-
-⚡ *Please respond as soon as possible*`;
+window.open(url, "_blank");
 
         document.getElementById("confirmPopup").style.display = "flex";
       }
