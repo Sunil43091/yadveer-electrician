@@ -367,14 +367,30 @@
         const service = document.getElementById("service").value;
         const problem = document.getElementById("problem").value;
 
-        bookingMessage = `⚡ Service Request
-        Name: ${name}
-        Phone: ${phone}
-        Area: ${area}
-        Date: ${serviceDate}
-        Available Time: ${availableTime}
-        Service: ${service}
-        Problem: ${problem}`;
+        const bookingMessage = `✨ *NEW SERVICE REQUEST*
+
+━━━━━━━━━━━━━━━
+
+👤 *Customer Details*  
+• Name: ${name}  
+• Phone: ${phone}  
+• Area: ${area}  
+
+━━━━━━━━━━━━━━━
+
+📅 *Booking Details*  
+• Date: ${serviceDate}  
+• Time: ${availableTime}  
+
+━━━━━━━━━━━━━━━
+
+🛠️ *Service Info*  
+• Service: ${service}  
+• Problem: ${problem}  
+
+━━━━━━━━━━━━━━━
+
+⚡ *Please respond as soon as possible*`;
 
         document.getElementById("confirmPopup").style.display = "flex";
       }
