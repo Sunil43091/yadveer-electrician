@@ -367,21 +367,25 @@ function sendWhatsApp(e) {
     month: "long",
     year: "numeric",
   });
+bookingMessage = 
+`🔔 *SERVICE BOOKING*
 
-  // SAVE IN GLOBAL VARIABLE (IMPORTANT)
-  bookingMessage = `✨ *NEW SERVICE REQUEST*
-───────────────
-👤 *Name:* ${name}
-📞 *Phone:* ${phone}
-📍 *Area:* ${area}
-───────────────
-📅 *Date:* ${formattedDate}
-⏰ *Time:* ${availableTime}
-───────────────
-🛠️ *Service:* ${service}
-───────────────
-⚡ *Please respond ASAP*`;
+━━━━━━━━━━━━━━━━━━
 
+👤 *${name}*
+📞 ${phone}
+📍 ${area}
+
+━━━━━━━━━━━━━━━━━━
+
+📅 ${formattedDate}
+⏰ ${availableTime}
+
+🛠️ *${service}*
+
+━━━━━━━━━━━━━━━━━━
+
+✅ _Kindly confirm the booking_`;
   // Show popup FIRST
   document.getElementById("confirmPopup").style.display = "flex";
 }
