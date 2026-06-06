@@ -294,14 +294,6 @@
               <option>Anytime / ਕਦੇ ਵੀ</option>
             </select>
           </div>
-          <div class="input-group">
-            <label>Problem / ਸਮੱਸਿਆ</label>
-            <textarea
-              id="problem"
-              rows="4"
-              placeholder="Describe your problem / ਆਪਣੀ ਸਮੱਸਿਆ ਲਿਖੋ"
-            ></textarea>
-          </div>
           <button id="submitBtn" type="submit">
             <i class="fa-brands fa-whatsapp"></i> Book Service on WhatsApp
           </button>
@@ -365,20 +357,15 @@
         const serviceDate = document.getElementById("serviceDate").value;
         const availableTime = document.getElementById("availableTime").value;
         const service = document.getElementById("service").value;
-        const problem = document.getElementById("problem").value;
-
        const phoneNumber = "919646064935"; // +91 without +
 const bookingMessage = `✨ *NEW SERVICE REQUEST*
 
 👤 Name: ${name}
 📞 Phone: ${phone}
 📍 Area: ${area}
-
 📅 Date: ${serviceDate}
 ⏰ Time: ${availableTime}
-
-🛠️ Service: ${service}
-📝 Problem: ${problem}`;
+🛠️ Service: ${service}`;
 
 const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(bookingMessage)}`;
 
